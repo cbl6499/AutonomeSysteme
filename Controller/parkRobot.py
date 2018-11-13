@@ -17,40 +17,65 @@ import numpy as np
 #    return distances
 
 
-def calculateMotorValues(current_pose, noDetectionDistance):
-    delta_x = 1
 
-    roh = np.sqrt(delta_x)
-    maxVel = 120 * 3.1415 / 180  # 4/3 of a full wheel turn
+
+def calculateMotorValues(current_pose, final_pose, matrix_k, wheel_radius, wheel_distance):
+    delta_x = final_pose[0] - current_pose[0]
+    delta_y = final_pose[1] - current_pose[1]
+
+
+    roh = np.sqrt((delta_x**2) + (delta_y**2))
+    alpha = -(current_pose[2]) + np.arctan2(delta_y, delta_x)
+    beta = - (current_pose[2]) - alpha
+
+    phi_r = (matrix_k[0,0] / wheel_radius * roh) + ((matrix_k[1,1]*wheel_distance) / wheel_radius * alpha) + ((matrix_k[1,2]*wheel_distance) / wheel_radius * beta)
+    phi_l = (matrix_k[0,0] / wheel_radius * roh) - ((matrix_k[1,1]*wheel_distance) / wheel_radius * alpha) - ((matrix_k[1,2]*wheel_distance) / wheel_radius * beta)
+
+
+
+    #maxVel = 120 * 3.1415 / 180  # 4/3 of a full wheel turn
 
     #velRight = maxVel - (dist[3] + dist[4] + dist[5])
     #velLeft = maxVel - (dist[0] + dist[1] + dist[2])
 
 
-    return 1
+    return phi_l, phi_r
 
 
 def main():
+    final_pose = np.array([
+                        [1.225],
+                        [0.0],
+                        [0.0]])
+
+    matrix_k = np.array([
+            [0.05, 0, 0],
+            [0, 1.5, 0.2]
+        ])
+
     robot = EPuckVRep('ePuck', port=19999, synchronous=False)
 
-    robot.enableAllSensors()
-    robot.setSensesAllTogether(True)   # we want fast sensing, so set robot to sensing mode where all sensors are sensed
+    wheel_radius = robot._wheelDiameter / 2;
+
+    wheel_distance = robot._wheelDistance
+
+    robot.enablePose()
 
     #noDetectionDistance = 0.05 * robot.getS()  # maximum distance that proximity sensors of ePuck may sense
 
     # main sense-act cycle
     while robot.isConnected():
 
-        robot.fastSensingOverSignal()
+        #robot.fastSensingOverSignal()
+        #distVector = robot.getProximitySensorValues()
 
-        distVector = robot.getProximitySensorValues()
         current_pose = robot._getPose()
-        print current_pose
-        #leftMotor, rightMotor = calculateMotorValues(current_pose)
+        print wheel_radius
+        leftMotor, rightMotor = calculateMotorValues(current_pose, final_pose, matrix_k, wheel_radius, wheel_distance)
 
         robot.setMotorSpeeds(leftMotor, rightMotor)
 
-        # maxVel = 120 * 3.1415 / 180
+        #maxVel = 120 * 3.1415 / 180
         #robot.setMotorSpeeds(maxVel, maxVel)
 
 
