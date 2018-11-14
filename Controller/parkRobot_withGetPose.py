@@ -25,18 +25,17 @@ def calculateMotorValues(current_pose, final_pose, wheel_radius, wheel_distance)
 
 def main():
 
+    robot = EPuckVRep('ePuck', port=19999, synchronous=False)
+    robot.enablePose()
+
     final_pose = np.array([
                         [1.225],
                         [0.0],
                         [0.0]])
 
-    robot = EPuckVRep('ePuck', port=19999, synchronous=False)
-
     wheel_radius = robot._wheelDiameter / 2
 
     wheel_distance = robot._wheelDistance
-
-    robot.enablePose()
 
     # main sense-act cycle
     while robot.isConnected():
@@ -52,7 +51,6 @@ def main():
             rightMotor = rightMotor + 0.7
 
         if round(current_pose[0],1) == round(final_pose[0],1) and round(current_pose[1],1) == final_pose[1] and round(current_pose[2],1) == final_pose[2]:
-
             robot.setMotorSpeeds(0, 0)
             print "STOP"
 
