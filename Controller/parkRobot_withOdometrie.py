@@ -9,8 +9,8 @@ def calculateMotorValues(current_pose, final_pose, wheel_radius, wheel_distance)
     delta_y = final_pose[1] - current_pose[1]
 
     matrix_k = np.array([
-        [0.03, 0, 0],
-        [0, 0.2, -0.1]
+        [0.005, 0, 0],
+        [0, 0.05, -0.002]
     ])
 
     roh = np.sqrt((delta_x**2) + (delta_y**2))
@@ -80,8 +80,8 @@ def main():
         [current_pose_od_a[2]]])
 
     values = robot._getWheelEncodingValues()
-    last_delta_sl = 0
-    last_delta_sr = 0
+    last_left_wheel_a = 0
+    last_right_wheel_a = 0
     delta_sl = 0
     delta_sr = 0
 
@@ -95,28 +95,37 @@ def main():
         values = robot._getWheelEncodingValues()
 
         #if(values[0], values[1] != 0):
-        current_delta_sl = np.mod(values[0] + (2*np.pi), (2*np.pi))
-        current_delta_sr = np.mod(values[1] + (2*np.pi), (2*np.pi))
+        current_left_wheel_a = np.remainder(values[0] + (2*np.pi), (2*np.pi))
+        current_right_wheel_a = np.remainder(values[1] + (2*np.pi), (2*np.pi))
 
-        delta_sl += (current_delta_sl - last_delta_sl) * (wheel_radius * 2)
-        delta_sr += (current_delta_sr - last_delta_sr) * (wheel_radius * 2)
+        if((current_left_wheel_a - last_left_wheel_a) > 0):
+            delta_sl = (current_left_wheel_a - last_left_wheel_a) * wheel_radius
+        else:
+            delta_sl = (((2*np.pi) - last_left_wheel_a) + current_left_wheel_a) * wheel_radius
 
-        last_delta_sl = current_delta_sl
-        last_delta_sr = current_delta_sr
+        if ((current_right_wheel_a - last_right_wheel_a) > 0):
+            delta_sr = (current_right_wheel_a - last_right_wheel_a) * wheel_radius
+        else:
+            delta_sr = (((2*np.pi) - last_right_wheel_a) + current_right_wheel_a) * wheel_radius
+
+
+        last_left_wheel_a = current_left_wheel_a
+        last_right_wheel_a = current_right_wheel_a
+
+
+        print "L: ", current_left_wheel_a
+        print "R: ", current_right_wheel_a
 
         current_pose_od = calculateOdometrie(delta_sl, delta_sr, current_pose_od, wheel_distance)
         print "current_pose_odo", current_pose_od
 
 
 
-        #print "L: ", delta_sl
-        #print "R: ", delta_sr
-
-        leftMotor, rightMotor = calculateMotorValues(current_pose, final_pose, wheel_radius, wheel_distance)
+        leftMotor, rightMotor = calculateMotorValues(current_pose_od, final_pose, wheel_radius, wheel_distance)
 
         maxVel = 120 * np.pi / 180
-        #leftMotor = leftMotor + maxVel/3
-        #rightMotor = rightMotor + maxVel/3
+        leftMotor = leftMotor + maxVel/3
+        rightMotor = rightMotor + maxVel/3
         tol = 0.05
 
         if found != True:
@@ -130,7 +139,7 @@ def main():
                 #print "current_pose", current_pose[0], current_pose[1], current_pose[2]
                 robot.setMotorSpeeds(leftMotor, rightMotor)
 
-        #print found
+        print found
 
         time.sleep(0.05)
 

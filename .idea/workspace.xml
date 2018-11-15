@@ -4,9 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/Controller/parkRobot_withGetPose.py" line="70" mnemonic="1" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75b562e4-9b8a-41ba-a9f7-5d0650be07ca" name="Default Changelist" comment="cool">
+    <list default="true" id="75b562e4-9b8a-41ba-a9f7-5d0650be07ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/old.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/old.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/parkRobot_withOdometrie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/parkRobot_withOdometrie.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +15,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/AutonomeSysteme$parkRobot.coverage" NAME="parkRobot Coverage Results" MODIFIED="1542298509427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Controller" />
-    <SUITE FILE_PATH="coverage/AutonomeSysteme$parkRobot_withOdometrie.coverage" NAME="parkRobot_withOdometrie Coverage Results" MODIFIED="1542193991617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Controller" />
+    <SUITE FILE_PATH="coverage/AutonomeSysteme$parkRobot.coverage" NAME="parkRobot Coverage Results" MODIFIED="1542322668683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Controller" />
+    <SUITE FILE_PATH="coverage/AutonomeSysteme$parkRobot_withOdometrie.coverage" NAME="parkRobot_withOdometrie Coverage Results" MODIFIED="1542323895797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Controller" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-480351591">
@@ -63,59 +63,35 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="15" />
-          <entry key="py" value="1920" />
-          <entry key="txt" value="248" />
+          <entry key="py" value="2832" />
+          <entry key="txt" value="253" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="263" />
-          <entry key="Python" value="1920" />
+          <entry key="PLAIN_TEXT" value="268" />
+          <entry key="Python" value="2832" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="23" />
+          <entry key="py" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="23" />
+          <entry key="Python" value="24" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withOdometrie.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BasicEPuck/ePuckVRep.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3910">
-              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
-              <folding>
-                <element signature="e#379#393#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Controller/old.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="76" column="28" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
+            <state relative-caret-position="187">
+              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -126,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withGetPose.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+            <state relative-caret-position="918">
+              <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -167,9 +143,9 @@
         <option value="$PROJECT_DIR$/Controller/parkRobot_withodometrie.py" />
         <option value="$PROJECT_DIR$/Controller/parkRobot.py" />
         <option value="$PROJECT_DIR$/BasicEPuck/ePuck.py" />
+        <option value="$PROJECT_DIR$/Controller/old.py" />
         <option value="$PROJECT_DIR$/Controller/parkRobot_withGetPose.py" />
         <option value="$PROJECT_DIR$/Controller/parkRobot_withOdometrie.py" />
-        <option value="$PROJECT_DIR$/Controller/old.py" />
       </list>
     </option>
   </component>
@@ -180,8 +156,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="1920" />
     <option name="y" value="27" />
-    <option name="width" value="923" />
+    <option name="width" value="925" />
     <option name="height" value="1020" />
   </component>
   <component name="ProjectView">
@@ -348,7 +325,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.parkRobot">
+  <component name="RunManager" selected="Python.parkRobot_withOdometrie">
     <configuration name="parkRobot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="AutonomeSysteme" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -399,8 +376,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.parkRobot" />
         <item itemvalue="Python.parkRobot_withOdometrie" />
+        <item itemvalue="Python.parkRobot" />
       </list>
     </recent_temporary>
   </component>
@@ -485,20 +462,34 @@
       <option name="project" value="LOCAL" />
       <updated>1542300010919</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="cool">
+      <created>1542300074341</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1542300074341</updated>
+    </task>
+    <task id="LOCAL-00012" summary="odo">
+      <created>1542313831384</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1542313831384</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="923" height="1020" extended-state="4" />
+    <frame x="1920" y="27" width="925" height="1020" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21436717" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.10032017" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" weight="0.3295583" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.1619479" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7679181" visible="true" weight="0.23782559" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997735" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -506,7 +497,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.2320819" side_tool="true" visible="true" weight="0.23782559" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -556,7 +547,8 @@
     <MESSAGE value="fix" />
     <MESSAGE value="nomol fix" />
     <MESSAGE value="cool" />
-    <option name="LAST_COMMIT_MESSAGE" value="cool" />
+    <MESSAGE value="odo" />
+    <option name="LAST_COMMIT_MESSAGE" value="odo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -596,20 +588,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withGetPose.py">
+    <entry file="file://$PROJECT_DIR$/Controller/old.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withOdometrie.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+          <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="81" selection-end-column="44" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -618,18 +600,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BasicEPuck/ePuckVRep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3910">
-          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+        <state relative-caret-position="17">
+          <caret line="266" column="8" selection-start-line="266" selection-start-column="8" selection-end-line="266" selection-end-column="8" />
           <folding>
             <element signature="e#379#393#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/old.py">
+    <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withGetPose.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="76" column="28" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
+        <state relative-caret-position="918">
+          <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withOdometrie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
