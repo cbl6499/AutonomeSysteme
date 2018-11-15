@@ -16,19 +16,12 @@ def calculateMotorValues(current_pose, final_pose, wheel_radius, wheel_distance)
     alpha = -(current_pose[2]) + np.arctan2(delta_y, delta_x)
     beta = - (current_pose[2]) - alpha
 
-    #phi_r = ((matrix_k[0,0] / wheel_radius) * roh) + (((matrix_k[1,1]*wheel_distance) / wheel_radius) * alpha) + (((matrix_k[1,2]*wheel_distance) / wheel_radius) * beta)
-    #phi_l = ((matrix_k[0,0] / wheel_radius) * roh) - (((matrix_k[1,1]*wheel_distance) / wheel_radius) * alpha) - (((matrix_k[1,2]*wheel_distance) / wheel_radius) * beta)
-
     phi_lr = np.array([[matrix_k[0, 0] / wheel_radius, (matrix_k[1, 1]*wheel_distance) / wheel_radius, (matrix_k[1, 2]*wheel_distance) / wheel_radius],
                       [matrix_k[0, 0] / wheel_radius, -(matrix_k[1, 1]*wheel_distance) / wheel_radius, -(matrix_k[1, 2]*wheel_distance) / wheel_radius]])
 
     angles = np.array([roh,alpha,beta])
 
-
-
     phi_l_r = phi_lr.dot(angles)
-
-    #print phi_l_r
 
     return phi_l_r[1], phi_l_r[0]
 
@@ -51,27 +44,15 @@ def main():
 
     found = False
 
-    # main sense-act cycle
     while robot.isConnected():
 
         current_pose = robot._getPose()
 
         leftMotor, rightMotor = calculateMotorValues(current_pose, final_pose, wheel_radius, wheel_distance)
 
-        #print leftMotor, rightMotor
-
         robot.getWheelEncoderValues()
 
         maxVel = 120 * np.pi / 180
-
-        #values = robot.getWheelEncoderValues()
-
-        #print values
-
-
-        #if  0.05 < leftMotor < 1.5 and 0.05 < rightMotor < 1.5:
-        #   leftMotor = leftMotor + 1
-        #    rightMotor = rightMotor + 1
 
         leftMotor = leftMotor + maxVel/2
         rightMotor = rightMotor + maxVel/2
@@ -83,7 +64,6 @@ def main():
                     final_pose[2] - tol < current_pose[2] < final_pose[2] + tol:
                 robot.setMotorSpeeds(0, 0)
                 found = True
-                #print "STOP"
 
             else:
                 #print "current_pose", current_pose[0], current_pose[1], current_pose[2]
