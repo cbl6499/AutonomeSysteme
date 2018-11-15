@@ -37,6 +37,8 @@ def main():
 
     wheel_distance = robot._wheelDistance
 
+    robot.enableWheelEncoding()
+
     # main sense-act cycle
     while robot.isConnected():
 
@@ -46,11 +48,22 @@ def main():
 
         #print leftMotor, rightMotor
 
-        if leftMotor < 1.5 and rightMotor < 1.5:
+        robot.getWheelEncoderValues()
+
+        #values = robot.getWheelEncoderValues()
+
+        #print values
+
+
+        if  0.05 < leftMotor < 1.5 and 0.05 < rightMotor < 1.5:
             leftMotor = leftMotor + 0.7
             rightMotor = rightMotor + 0.7
 
-        if round(current_pose[0],1) == round(final_pose[0],1) and round(current_pose[1],1) == final_pose[1] and round(current_pose[2],1) == final_pose[2]:
+        tol = 0.005
+
+        if round(final_pose[0], 3) - tol < round(current_pose[0],3) < round(final_pose[0],3) + tol and \
+           round(final_pose[1], 3) - tol < round(current_pose[1],3) < round(final_pose[1],3) + tol and \
+           round(final_pose[2], 0) - tol < round(current_pose[2],0) < round(final_pose[2],0) + tol:
             robot.setMotorSpeeds(0, 0)
             print "STOP"
 
