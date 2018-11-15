@@ -8,7 +8,7 @@ def calculateMotorValues(current_pose, final_pose, wheel_radius, wheel_distance)
     delta_y = final_pose[1] - current_pose[1]
 
     matrix_k = np.array([
-        [0.04, 0, 0],
+        [0.03, 0, 0],
         [0, 0.2, -0.1]
     ])
 
@@ -73,9 +73,9 @@ def main():
         #   leftMotor = leftMotor + 1
         #    rightMotor = rightMotor + 1
 
-        leftMotor = leftMotor + maxVel
-        rightMotor = rightMotor + maxVel
-        tol = 0.05
+        leftMotor = leftMotor + maxVel/2
+        rightMotor = rightMotor + maxVel/2
+        tol = 0.02
 
         if found != True:
             if final_pose[0] - tol < current_pose[0] < final_pose[0] + tol and \
