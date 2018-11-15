@@ -62,6 +62,8 @@ def main():
 
         robot.getWheelEncoderValues()
 
+        maxVel = 120 * np.pi / 180
+
         #values = robot.getWheelEncoderValues()
 
         #print values
@@ -71,6 +73,8 @@ def main():
         #   leftMotor = leftMotor + 1
         #    rightMotor = rightMotor + 1
 
+        leftMotor = leftMotor + maxVel
+        rightMotor = rightMotor + maxVel
         tol = 0.05
 
         if found != True:
