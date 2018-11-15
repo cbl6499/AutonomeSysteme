@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Controller/parkRobot_withGetPose.py" line="90" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/Controller/parkRobot_withGetPose.py" line="70" mnemonic="1" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75b562e4-9b8a-41ba-a9f7-5d0650be07ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/parkRobot_withGetPose.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/parkRobot_withGetPose.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/parkRobot_withOdometrie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/parkRobot_withOdometrie.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/AutonomeSysteme$parkRobot.coverage" NAME="parkRobot Coverage Results" MODIFIED="1542296583563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Controller" />
+    <SUITE FILE_PATH="coverage/AutonomeSysteme$parkRobot.coverage" NAME="parkRobot Coverage Results" MODIFIED="1542298509427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Controller" />
     <SUITE FILE_PATH="coverage/AutonomeSysteme$parkRobot_withOdometrie.coverage" NAME="parkRobot_withOdometrie Coverage Results" MODIFIED="1542193991617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Controller" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -63,24 +64,24 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="15" />
-          <entry key="py" value="1894" />
-          <entry key="txt" value="232" />
+          <entry key="py" value="1918" />
+          <entry key="txt" value="244" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="247" />
-          <entry key="Python" value="1894" />
+          <entry key="PLAIN_TEXT" value="259" />
+          <entry key="Python" value="1918" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="21" />
+          <entry key="py" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="21" />
+          <entry key="Python" value="22" />
         </counts>
       </usages-collector>
     </session>
@@ -90,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withOdometrie.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-380">
-              <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+            <state relative-caret-position="351">
+              <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -100,10 +101,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BasicEPuck/ePuckVRep.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3910">
+              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+              <folding>
+                <element signature="e#379#393#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withGetPose.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="73" column="17" lean-forward="true" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
+            <state relative-caret-position="221">
+              <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -143,8 +156,8 @@
         <option value="$PROJECT_DIR$/Controller/parkRobot_withodometrie.py" />
         <option value="$PROJECT_DIR$/Controller/parkRobot.py" />
         <option value="$PROJECT_DIR$/BasicEPuck/ePuck.py" />
-        <option value="$PROJECT_DIR$/Controller/parkRobot_withOdometrie.py" />
         <option value="$PROJECT_DIR$/Controller/parkRobot_withGetPose.py" />
+        <option value="$PROJECT_DIR$/Controller/parkRobot_withOdometrie.py" />
       </list>
     </option>
   </component>
@@ -220,6 +233,7 @@
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
           <PATH vcs="Git" revision="">$PROJECT_DIR$/Controller/parkRobot_withGetPose.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Controller/parkRobot_withOdometrie.py</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -443,7 +457,21 @@
       <option name="project" value="LOCAL" />
       <updated>1542294025152</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix">
+      <created>1542296655981</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1542296655981</updated>
+    </task>
+    <task id="LOCAL-00009" summary="nomol fix">
+      <created>1542296747599</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1542296747599</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -511,7 +539,9 @@
     <MESSAGE value="parkRobot with odometrie" />
     <MESSAGE value="test mol clemens" />
     <MESSAGE value="up" />
-    <option name="LAST_COMMIT_MESSAGE" value="up" />
+    <MESSAGE value="fix" />
+    <MESSAGE value="nomol fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="nomol fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -544,26 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BasicEPuck/ePuckVRep.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1377">
-          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
-          <folding>
-            <element signature="e#379#393#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withOdometrie.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-380">
-          <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BasicEPuck/ePuck.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -573,10 +583,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withGetPose.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="73" column="17" lean-forward="true" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
+        <state relative-caret-position="221">
+          <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withOdometrie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BasicEPuck/ePuckVRep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3910">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+          <folding>
+            <element signature="e#379#393#0" expanded="true" />
           </folding>
         </state>
       </provider>

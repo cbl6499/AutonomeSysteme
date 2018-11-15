@@ -40,8 +40,6 @@ def main():
 
     wheel_distance = robot._wheelDistance
 
-    robot.enableWheelEncoding()
-
     found = False
 
     while robot.isConnected():
@@ -49,8 +47,6 @@ def main():
         current_pose = robot._getPose()
 
         leftMotor, rightMotor = calculateMotorValues(current_pose, final_pose, wheel_radius, wheel_distance)
-
-        robot.getWheelEncoderValues()
 
         maxVel = 120 * np.pi / 180
 

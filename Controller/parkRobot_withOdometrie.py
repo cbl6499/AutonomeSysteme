@@ -26,6 +26,24 @@ def calculateMotorValues(current_pose, final_pose, wheel_radius, wheel_distance)
     return phi_l_r[1], phi_l_r[0]
 
 
+
+def calculateOdometrie(driven_route_left_wheel, driven_route_right_wheel, currentPosition, wheel_distance):
+    # Gefahrene Wegstrecke delta s
+    driven_route = (driven_route_right_wheel + driven_route_left_wheel) / 2.0
+
+    # Aktuelle Pose
+    pose = currentPosition
+
+    matrix = np.array([
+        [driven_route * (cos(currentPosition[2] + ((driven_route_right_wheel - driven_route_left_wheel) / (2.0 * wheel_distance))))],
+        [driven_route * (sin(currentPosition[2] + ((driven_route_right_wheel - driven_route_left_wheel) / (2.0 * wheel_distance))))],
+        [((driven_route_right_wheel - driven_route_left_wheel) / (2.0 * wheel_distance))]])
+
+    # Berechnung der naechsten Pose (P n+1)
+    matrix_P_n1 = pose + matrix
+
+
+
 def main():
 
     robot = EPuckVRep('ePuck', port=19999, synchronous=False)
@@ -50,7 +68,11 @@ def main():
 
         leftMotor, rightMotor = calculateMotorValues(current_pose, final_pose, wheel_radius, wheel_distance)
 
-        robot.getWheelEncoderValues()
+        values = robot._getWheelEncodingValues()
+        current_wheel_encoding_L = values[0]
+        current_wheel_encoding_R = values[1]
+
+
 
         maxVel = 120 * np.pi / 180
 
