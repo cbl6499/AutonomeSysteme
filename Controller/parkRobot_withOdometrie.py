@@ -1,6 +1,7 @@
 import time
 from BasicEPuck.ePuckVRep import EPuckVRep
 import numpy as np
+from math import sin, cos
 
 
 def calculateMotorValues(current_pose, final_pose, wheel_radius, wheel_distance):
@@ -34,14 +35,24 @@ def calculateOdometrie(driven_route_left_wheel, driven_route_right_wheel, curren
     # Aktuelle Pose
     pose = currentPosition
 
+    #pose = np.array([
+    #                    [currentPosition[0]],
+    #                    [currentPosition[1]],
+    #                    [currentPosition[2]]])
+
+    #print "test", pose
+
     matrix = np.array([
-        [driven_route * (cos(currentPosition[2] + ((driven_route_right_wheel - driven_route_left_wheel) / (2.0 * wheel_distance))))],
-        [driven_route * (sin(currentPosition[2] + ((driven_route_right_wheel - driven_route_left_wheel) / (2.0 * wheel_distance))))],
-        [((driven_route_right_wheel - driven_route_left_wheel) / (2.0 * wheel_distance))]])
+        [driven_route * (cos(pose[2] + ((driven_route_right_wheel - driven_route_left_wheel) / (2.0 * wheel_distance))))],
+        [driven_route * (sin(pose[2] + ((driven_route_right_wheel - driven_route_left_wheel) / (2.0 * wheel_distance))))],
+        [((driven_route_right_wheel - driven_route_left_wheel) / (wheel_distance))]])
 
     # Berechnung der naechsten Pose (P n+1)
     matrix_P_n1 = pose + matrix
 
+    #print "matrix_P_n1", matrix_P_n1
+
+    return matrix_P_n1
 
 
 def main():
@@ -62,23 +73,51 @@ def main():
 
     found = False
 
+    current_pose_od_a = robot._getPose()
+    current_pose_od = np.array([
+        [current_pose_od_a[0]],
+        [current_pose_od_a[1]],
+        [current_pose_od_a[2]]])
+
+    values = robot._getWheelEncodingValues()
+    last_delta_sl = 0
+    last_delta_sr = 0
+    delta_sl = 0
+    delta_sr = 0
+
     while robot.isConnected():
 
         current_pose = robot._getPose()
 
-        leftMotor, rightMotor = calculateMotorValues(current_pose, final_pose, wheel_radius, wheel_distance)
+        print "current_pose", current_pose[0], current_pose[1], current_pose[2]
+
 
         values = robot._getWheelEncodingValues()
-        current_wheel_encoding_L = values[0]
-        current_wheel_encoding_R = values[1]
+
+        #if(values[0], values[1] != 0):
+        current_delta_sl = np.mod(values[0] + (2*np.pi), (2*np.pi))
+        current_delta_sr = np.mod(values[1] + (2*np.pi), (2*np.pi))
+
+        delta_sl += (current_delta_sl - last_delta_sl) * (wheel_radius * 2)
+        delta_sr += (current_delta_sr - last_delta_sr) * (wheel_radius * 2)
+
+        last_delta_sl = current_delta_sl
+        last_delta_sr = current_delta_sr
+
+        current_pose_od = calculateOdometrie(delta_sl, delta_sr, current_pose_od, wheel_distance)
+        print "current_pose_odo", current_pose_od
 
 
+
+        #print "L: ", delta_sl
+        #print "R: ", delta_sr
+
+        leftMotor, rightMotor = calculateMotorValues(current_pose, final_pose, wheel_radius, wheel_distance)
 
         maxVel = 120 * np.pi / 180
-
-        leftMotor = leftMotor + maxVel/2
-        rightMotor = rightMotor + maxVel/2
-        tol = 0.02
+        #leftMotor = leftMotor + maxVel/3
+        #rightMotor = rightMotor + maxVel/3
+        tol = 0.05
 
         if found != True:
             if final_pose[0] - tol < current_pose[0] < final_pose[0] + tol and \
@@ -91,7 +130,7 @@ def main():
                 #print "current_pose", current_pose[0], current_pose[1], current_pose[2]
                 robot.setMotorSpeeds(leftMotor, rightMotor)
 
-        print found
+        #print found
 
         time.sleep(0.05)
 

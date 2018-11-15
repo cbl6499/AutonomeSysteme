@@ -52,7 +52,7 @@ def main():
 
         leftMotor = leftMotor + maxVel/2
         rightMotor = rightMotor + maxVel/2
-        tol = 0.02
+        tol = 0.05
 
         if found != True:
             if final_pose[0] - tol < current_pose[0] < final_pose[0] + tol and \
