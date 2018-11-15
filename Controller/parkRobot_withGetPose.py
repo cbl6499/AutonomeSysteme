@@ -55,15 +55,15 @@ def main():
         #print values
 
 
-        if  0.05 < leftMotor < 1.5 and 0.05 < rightMotor < 1.5:
-            leftMotor = leftMotor + 0.7
-            rightMotor = rightMotor + 0.7
+        #if  0.05 < leftMotor < 1.5 and 0.05 < rightMotor < 1.5:
+        #    leftMotor = leftMotor + 0.7
+        #    rightMotor = rightMotor + 0.7
 
-        tol = 0.005
+        tol = 0.02
 
-        if round(final_pose[0], 3) - tol < round(current_pose[0],3) < round(final_pose[0],3) + tol and \
-           round(final_pose[1], 3) - tol < round(current_pose[1],3) < round(final_pose[1],3) + tol and \
-           round(final_pose[2], 0) - tol < round(current_pose[2],0) < round(final_pose[2],0) + tol:
+        if final_pose[0] - tol < current_pose[0] < final_pose[0] + tol and \
+           final_pose[1] - tol < current_pose[1] < final_pose[1] + tol and \
+           final_pose[2] - tol < current_pose[2] < final_pose[2] + tol:
             robot.setMotorSpeeds(0, 0)
             print "STOP"
 
