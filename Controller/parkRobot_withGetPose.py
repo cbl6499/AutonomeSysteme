@@ -19,18 +19,18 @@ def calculateMotorValues(current_pose, final_pose, wheel_radius, wheel_distance)
     #phi_r = ((matrix_k[0,0] / wheel_radius) * roh) + (((matrix_k[1,1]*wheel_distance) / wheel_radius) * alpha) + (((matrix_k[1,2]*wheel_distance) / wheel_radius) * beta)
     #phi_l = ((matrix_k[0,0] / wheel_radius) * roh) - (((matrix_k[1,1]*wheel_distance) / wheel_radius) * alpha) - (((matrix_k[1,2]*wheel_distance) / wheel_radius) * beta)
 
-    phi_lr = np.array([matrix_k[0, 0] / wheel_radius, (matrix_k[1, 1]*wheel_distance) / wheel_radius, (matrix_k[1, 2]*wheel_distance) / wheel_radius],
-                      [matrix_k[0, 0] / wheel_radius, -(matrix_k[1, 1]*wheel_distance) / wheel_radius, -(matrix_k[1, 2]*wheel_distance) / wheel_radius])
+    phi_lr = np.array([[matrix_k[0, 0] / wheel_radius, (matrix_k[1, 1]*wheel_distance) / wheel_radius, (matrix_k[1, 2]*wheel_distance) / wheel_radius],
+                      [matrix_k[0, 0] / wheel_radius, -(matrix_k[1, 1]*wheel_distance) / wheel_radius, -(matrix_k[1, 2]*wheel_distance) / wheel_radius]])
 
-    angles = np.array([roh],
-                      [alpha],
-                      [beta])
+    angles = np.array([roh,alpha,beta])
 
-    phi_l_r = phi_lr * angles
 
-    print phi_l_r
 
-    return phi_l_r[0], phi_l_r[1]
+    phi_l_r = phi_lr.dot(angles)
+
+    #print phi_l_r
+
+    return phi_l_r[1], phi_l_r[0]
 
 
 def main():
@@ -71,7 +71,7 @@ def main():
         #   leftMotor = leftMotor + 1
         #    rightMotor = rightMotor + 1
 
-        tol = 0.02
+        tol = 0.05
 
         if found != True:
             if final_pose[0] - tol < current_pose[0] < final_pose[0] + tol and \
@@ -82,7 +82,7 @@ def main():
                 #print "STOP"
 
             else:
-                print "current_pose", current_pose[0], current_pose[1], current_pose[2]
+                #print "current_pose", current_pose[0], current_pose[1], current_pose[2]
                 robot.setMotorSpeeds(leftMotor, rightMotor)
 
         print found
