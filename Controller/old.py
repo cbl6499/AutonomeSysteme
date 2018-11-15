@@ -74,7 +74,7 @@ def main():
     diven_route_L = 0
     diven_route_R = 0
 
-    # main sense-act cycle
+    # main sense-act cycleff
     while robot.isConnected():
 
         values = robot._getWheelEncodingValues()
