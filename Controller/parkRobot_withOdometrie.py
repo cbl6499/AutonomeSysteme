@@ -55,7 +55,7 @@ def calculateOdometrie(driven_route_left_wheel, driven_route_right_wheel, curren
     # Berechnung der naechsten Pose (P n+1)
     matrix_P_n1 = pose + matrix
 
-    #print "matrix_P_n1", matrix_P_n1
+    print "matrix_P_n1", matrix_P_n1
 
     return matrix_P_n1
 
@@ -117,12 +117,14 @@ def main():
         #print "L: ", delta_sl
         #print "R: ", delta_sr
 
-        current_pose_od = calculateOdometrie(delta_sl, delta_sr, current_pose_od, wheel_distance)
+
         #print "current_pose_odo", current_pose_od
 
 
 
         leftMotor, rightMotor = calculateMotorValues(current_pose_od, final_pose, wheel_radius, wheel_distance)
+
+        current_pose_od = calculateOdometrie(delta_sl, delta_sr, current_pose_od, wheel_distance)
 
         maxVel = 120 * np.pi / 180
         leftMotor = leftMotor + maxVel/3
