@@ -98,7 +98,7 @@ def main():
         #print "current_pose", current_pose[0], current_pose[1], current_pose[2]
 
 
-        values = robot._getWheelEncodingValues()
+        values = robot.getWheelEncoderValues()
 
 
         current_left_wheel_a = values[0]
