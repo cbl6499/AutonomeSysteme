@@ -127,8 +127,8 @@ def main():
         current_pose_od = calculateOdometrie(delta_sl, delta_sr, current_pose_od, wheel_distance)
 
         maxVel = 120 * np.pi / 180
-        leftMotor = leftMotor + maxVel/3
-        rightMotor = rightMotor + maxVel/3
+        leftMotor = leftMotor
+        rightMotor = rightMotor
         tol = 0.05
 
         if found != True:
@@ -139,7 +139,7 @@ def main():
                 found = True
 
             else:
-                print "current_pose", current_pose_od[0], current_pose_od[1], current_pose_od[2]
+                #print "current_pose", current_pose_od[0], current_pose_od[1], current_pose_od[2]
                 robot.setMotorSpeeds(leftMotor, rightMotor)
 
         print found
