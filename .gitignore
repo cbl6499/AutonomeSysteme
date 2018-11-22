@@ -106,3 +106,4 @@ venv.bak/
 # remoteApi
 remoteApi.dylib
 remoteApi.so
+remoteApi.dll
