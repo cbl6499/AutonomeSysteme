@@ -45,7 +45,7 @@ def main(mac):
 		# If you want debug information:
 		#~ robot = ePuck(mac, debug = True)
 		# else:
-		robot = EPuckReal('3012', mac)
+		robot = EPuckReal('3312', mac)
 		# robot = EPuckReal('2836', mac)
 		# robot = EPuckReal('3243', '10:00:E8:D7:03:A2')
 		# robot = EPuckReal('3312', '10:00:E8:AD:78:6A')
