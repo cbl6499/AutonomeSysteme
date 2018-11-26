@@ -101,7 +101,7 @@ def calculateOdometrie(driven_route_left_wheel, driven_route_right_wheel, curren
     # Berechnung der naechsten Pose (P n+1)
     matrix_P_n1 = pose + matrix
 
-    print "matrix_P_n1", matrix_P_n1
+    #print "matrix_P_n1", matrix_P_n1
 
     return matrix_P_n1
 
@@ -109,9 +109,12 @@ def calculateOdometrie(driven_route_left_wheel, driven_route_right_wheel, curren
 
 def main():
     image = I.new("RGB", (resolX, resolY), "white")
-    robot = EPuckVRep('ePuck', port=19999, synchronous=False)
+    robot = EPuckVRep('ePuck', port=19999, synchronous=True)
     robot.enablePose()
     robot.enableCamera()
+    robot.enableAllSensors()
+    robot.setSensesAllTogether(True)
+    noDetectionDistance = 0.05 * robot.getS()
     global boxFound
 
     final_pose = np.array([
@@ -144,6 +147,8 @@ def main():
     while robot.isConnected():
 
         values = robot.getWheelEncoderValues()
+        robot
+        robot.fastSensingOverSignal()
 
         current_left_wheel_a = values[0]
         current_right_wheel_a = values[1]
@@ -153,7 +158,6 @@ def main():
         delta_sl = delta_sl * wheel_radius
         delta_sr = delta_sr * wheel_radius
 
-
         last_left_wheel_a = current_left_wheel_a
         last_right_wheel_a = current_right_wheel_a
 
@@ -161,19 +165,32 @@ def main():
         xCenter = [-1]
         image = robot.getCameraImage()          #get new image
 
+        current_pose_od = calculateOdometrie(delta_sl, delta_sr, current_pose_od, wheel_distance)
+        delta_x = final_pose[0] - current_pose_od[0]
+        delta_y = final_pose[1] - current_pose_od[1]
+
+        roh = np.sqrt((delta_x ** 2) + (delta_y ** 2))
+        print "roh", roh
+
         #print boxFound
         if boxFound != True:
             leftMotor, rightMotor = searchBox(image)
-        else:
+        elif roh < 0.8:
+            #robot.setMotorSpeeds(0, 0)
             leftMotor, rightMotor = approach(xCenter, image, maxVel)
             #print "Drive"
+        else:
+            print "uppps"
+            leftMotor, rightMotor = [0,0]
+            #leftMotor, rightMotor = calculateMotorValues(current_pose_od, final_pose, wheel_radius, wheel_distance)
 
         robot.setMotorSpeeds(leftMotor, rightMotor)
 
-        #leftMotor, rightMotor = calculateMotorValues(current_pose_od, final_pose, wheel_radius, wheel_distance)
 
-        current_pose_od = calculateOdometrie(delta_sl, delta_sr, current_pose_od, wheel_distance)
-        print "current_pose", current_pose_od[0], current_pose_od[1], current_pose_od[2]
+        #print "current_pose_od", current_pose_od[0], current_pose_od[1], current_pose_od[2]
+        #print "curren_pos", robot.getPose()
+
+
 
         # leftMotor = leftMotor
         # rightMotor = rightMotor
