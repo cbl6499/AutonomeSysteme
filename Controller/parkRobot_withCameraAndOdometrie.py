@@ -79,7 +79,7 @@ def calculateMotorValues(current_pose, final_pose, wheel_radius, wheel_distance)
     #    [0, 0.2, -0.1]])
     matrix_k = np.array([
         [0.05, 0, 0],
-        [0, 0.05, -0.02]])
+        [0, 0.025, -0.02]])
 
     roh = np.sqrt((delta_x**2) + (delta_y**2))
     alpha = -(current_pose[2]) + np.arctan2(delta_y, delta_x)
