@@ -79,7 +79,7 @@ def calculateMotorValues(current_pose, final_pose, wheel_radius, wheel_distance)
     #    [0, 0.2, -0.1]])
     matrix_k = np.array([
         [0.05, 0, 0],
-        [0, 0.05, -0.025]])
+        [0, 0.05, -0.02]])
 
     roh = np.sqrt((delta_x**2) + (delta_y**2))
     alpha = -(current_pose[2]) + np.arctan2(delta_y, delta_x)
@@ -227,16 +227,19 @@ def main():
                         final_pose[2] - tol < current_pose_od[2] < final_pose[2] + tol:
                     robot.setMotorSpeeds(0, 0)
                     found = True
+                    time.sleep(1000.0)
+                    break
                 else:
                     # print "current_pose", current_pose_od[0], current_pose_od[1], current_pose_od[2]
                     robot.setMotorSpeeds(leftMotor, rightMotor)
+
 
             print found
 
         robot.setMotorSpeeds(leftMotor, rightMotor)
         round_one = True
 
-        print "current_pose_od", current_pose_od[0], current_pose_od[1], current_pose_od[2]
+        #print "current_pose_od", current_pose_od[0], current_pose_od[1], current_pose_od[2]
         #test = robot.getPose()
         #print "curren_pos", test[0], test[1], np.rad2deg(test[2])
 
