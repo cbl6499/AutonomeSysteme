@@ -74,9 +74,12 @@ def calculateMotorValues(current_pose, final_pose, wheel_radius, wheel_distance)
     delta_x = final_pose[0] - current_pose[0]
     delta_y = final_pose[1] - current_pose[1]
 
+    #matrix_k = np.array([
+    #    [0.03, 0, 0],
+    #    [0, 0.2, -0.1]])
     matrix_k = np.array([
-        [0.03, 0, 0],
-        [0, 0.2, -0.1]])
+        [0.05, 0, 0],
+        [0, 0.05, -0.025]])
 
     roh = np.sqrt((delta_x**2) + (delta_y**2))
     alpha = -(current_pose[2]) + np.arctan2(delta_y, delta_x)
@@ -195,46 +198,47 @@ def main():
         delta_x = final_pose[0] - current_pose_od[0]
         delta_y = final_pose[1] - current_pose_od[1]
         roh = np.sqrt((delta_x ** 2) + (delta_y ** 2))
-        print "roh", roh
+        #print "roh", roh
 
         #print boxFound
         if boxFound != True:
             leftMotor, rightMotor = searchBox(image, robot)
 
-        elif True:
+        elif roh > 0.45:
             #robot.setMotorSpeeds(0, 0)
             leftMotor, rightMotor = approach(xCenter, image, maxVel)
             #print "current_pose_x", current_pose_od[0]
             #print "final_pose_x", final_pose[0]
             #print "Drive"
         else:
-            print "uppps"
-            leftMotor, rightMotor = [0,0]
-            #leftMotor, rightMotor = calculateMotorValues(current_pose_od, final_pose, wheel_radius, wheel_distance)
+            #print "uppps"
+            #leftMotor, rightMotor = [0,0]
+            leftMotor, rightMotor = calculateMotorValues(current_pose_od, final_pose, wheel_radius, wheel_distance)
+            #maxVel = 120 * np.pi / 180
+
+            #leftMotor = leftMotor + maxVel / 2
+            #rightMotor = rightMotor + maxVel / 2
+
+            tol = 0.05
+
+            if found != True:
+                if final_pose[0] - tol < current_pose_od[0] < final_pose[0] + tol and \
+                        final_pose[1] - tol < current_pose_od[1] < final_pose[1] + tol and \
+                        final_pose[2] - tol < current_pose_od[2] < final_pose[2] + tol:
+                    robot.setMotorSpeeds(0, 0)
+                    found = True
+                else:
+                    # print "current_pose", current_pose_od[0], current_pose_od[1], current_pose_od[2]
+                    robot.setMotorSpeeds(leftMotor, rightMotor)
+
+            print found
 
         robot.setMotorSpeeds(leftMotor, rightMotor)
         round_one = True
 
-        #print "current_pose_od", current_pose_od[0], current_pose_od[1], current_pose_od[2]
+        print "current_pose_od", current_pose_od[0], current_pose_od[1], current_pose_od[2]
         #test = robot.getPose()
         #print "curren_pos", test[0], test[1], np.rad2deg(test[2])
-
-        # leftMotor = leftMotor
-        # rightMotor = rightMotor
-        # tol = 0.05
-        #
-        # if found != True:
-        #     if final_pose[0] - tol < current_pose_od[0] < final_pose[0] + tol and \
-        #             final_pose[1] - tol < current_pose_od[1] < final_pose[1] + tol and \
-        #             final_pose[2] - tol < current_pose_od[2] < final_pose[2] + tol:
-        #         robot.setMotorSpeeds(0, 0)
-        #         found = True
-        #
-        #     else:
-        #         #print "current_pose", current_pose_od[0], current_pose_od[1], current_pose_od[2]
-        #         robot.setMotorSpeeds(leftMotor, rightMotor)
-        #
-        # print found
 
         time.sleep(0.05)
 
