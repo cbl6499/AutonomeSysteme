@@ -9,20 +9,25 @@ boxFound = False
 last_left_wheel_a = 0
 last_right_wheel_a = 0
 round_one = False
+current_pose_od = np.array([
+                        [0.0],
+                        [0.0],
+                        [0.0]])
 
 
-def searchBox(image):
+def searchBox(image, robo):
     global boxFound
 
     xCenter = [-1]
-    leftMotor, rightMotor = 0.05, -0.05  # turn clockwise, since box detection in image searches from left to right,
+    leftMotor, rightMotor = 0.1, -0.1  # turn clockwise, since box detection in image searches from left to right,
     # and we want to detect the same box again, not a second one appearing now
 
     if detectBox(image, resolX, resolY, xCenter):
         boxFound = True
         print "Box found"
-        leftMotor = 0.02
-        rightMotor = 0.02
+        leftMotor = 0.5
+        rightMotor = 0.5
+        setCurrentPose(robo)
         return leftMotor, rightMotor
     else:
         return leftMotor, rightMotor
@@ -58,7 +63,7 @@ def approach (xCenter, image, maxVel):
     if xCenter[0] == -1:
         if not detectBox(image, resolX, resolY, xCenter):
             # lost the box: go on searching
-            leftMotor, rightMotor = 0.05, -0.05
+            leftMotor, rightMotor = 0.1, -0.1
             return leftMotor, rightMotor
     err = (float(resolX) / 2 - xCenter[0]) / float(resolX)
     leftMotor = (-0.5 * float(err) + 0.75) * maxVel / 2.0
@@ -71,8 +76,7 @@ def calculateMotorValues(current_pose, final_pose, wheel_radius, wheel_distance)
 
     matrix_k = np.array([
         [0.03, 0, 0],
-        [0, 0.2, -0.1]
-    ])
+        [0, 0.2, -0.1]])
 
     roh = np.sqrt((delta_x**2) + (delta_y**2))
     alpha = -(current_pose[2]) + np.arctan2(delta_y, delta_x)
@@ -110,6 +114,14 @@ def calculateOdometrie(driven_route_left_wheel, driven_route_right_wheel, curren
 
     return matrix_P_n1
 
+def setCurrentPose(robot):
+    global current_pose_od
+
+    current_pose_od_a = robot.getPose()
+    current_pose_od = np.array([
+        [current_pose_od_a[0]],
+        [current_pose_od_a[1]],
+        [current_pose_od_a[2]]])
 
 
 def main():
@@ -133,11 +145,13 @@ def main():
 
     found = False
 
-    current_pose_od_a = robot.getPose()
+    #current_pose_od_a = robot.getPose()
     #current_pose_od = np.array([
     #    [current_pose_od_a[0]],
     #    [current_pose_od_a[1]],
     #    [current_pose_od_a[2]]])
+
+    global current_pose_od
     current_pose_od = np.array([
         [0.5],
         [0.5],
@@ -164,7 +178,8 @@ def main():
             delta_sl = delta_sl * wheel_radius
             delta_sr = delta_sr * wheel_radius
 
-
+            global current_pose_od
+            current_pose_od = calculateOdometrie(delta_sl, delta_sr, current_pose_od, wheel_distance)
 
         global last_left_wheel_a
         global last_right_wheel_a
@@ -179,17 +194,13 @@ def main():
         #current_pose = robot.getPose()
         delta_x = final_pose[0] - current_pose_od[0]
         delta_y = final_pose[1] - current_pose_od[1]
-
-        if (round_one == True):
-            current_pose_od = calculateOdometrie(delta_sl, delta_sr, current_pose_od, wheel_distance)
-
-
         roh = np.sqrt((delta_x ** 2) + (delta_y ** 2))
         print "roh", roh
 
         #print boxFound
         if boxFound != True:
-            leftMotor, rightMotor = searchBox(image)
+            leftMotor, rightMotor = searchBox(image, robot)
+
         elif True:
             #robot.setMotorSpeeds(0, 0)
             leftMotor, rightMotor = approach(xCenter, image, maxVel)
@@ -205,7 +216,8 @@ def main():
         round_one = True
 
         #print "current_pose_od", current_pose_od[0], current_pose_od[1], current_pose_od[2]
-        #print "curren_pos", robot.getPose()
+        #test = robot.getPose()
+        #print "curren_pos", test[0], test[1], np.rad2deg(test[2])
 
         # leftMotor = leftMotor
         # rightMotor = rightMotor
