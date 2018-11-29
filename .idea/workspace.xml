@@ -19,15 +19,15 @@
     <SUITE FILE_PATH="coverage/AutonomeSysteme$parkRobot.coverage" NAME="parkRobot Coverage Results" MODIFIED="1542743151568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Controller" />
     <SUITE FILE_PATH="coverage/AutonomeSysteme$parkRobot_withOdometrie.coverage" NAME="parkRobot_withOdometrie Coverage Results" MODIFIED="1542898434640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Controller" />
     <SUITE FILE_PATH="coverage/AutonomeSysteme$braitenbergRealEPuck.coverage" NAME="braitenbergRealEPuck Coverage Results" MODIFIED="1542905476348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Controller" />
-    <SUITE FILE_PATH="coverage/AutonomeSysteme$parkRobot_withCameraAndOdometrie.coverage" NAME="parkRobot_withCameraAndOdometrie Coverage Results" MODIFIED="1543418270197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Controller" />
+    <SUITE FILE_PATH="coverage/AutonomeSysteme$parkRobot_withCameraAndOdometrie.coverage" NAME="parkRobot_withCameraAndOdometrie Coverage Results" MODIFIED="1543482469284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Controller" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withCameraAndOdometrie.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="81" column="24" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
+            <state relative-caret-position="238">
+              <caret line="80" column="16" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -36,9 +36,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/differentControllers/exercise4SolutionNeu.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2788">
+              <caret line="167" column="16" selection-start-line="167" selection-start-column="16" selection-end-line="168" selection-end-column="21" />
+              <folding>
+                <element signature="e#214#225#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withGetPose.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
+            <state relative-caret-position="816">
               <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="53" selection-end-column="42" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -96,10 +108,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="39" />
     <option name="y" value="27" />
-    <option name="width" value="879" />
+    <option name="width" value="885" />
     <option name="height" value="1053" />
   </component>
   <component name="ProjectView">
@@ -316,7 +328,8 @@
       <workItem from="1543162436600" duration="540000" />
       <workItem from="1543256884238" duration="11245000" />
       <workItem from="1543392859644" duration="14775000" />
-      <workItem from="1543411945037" duration="5933000" />
+      <workItem from="1543411945037" duration="10818000" />
+      <workItem from="1543479891287" duration="2515000" />
     </task>
     <task id="LOCAL-00001" summary="setup">
       <created>1542100416795</created>
@@ -451,22 +464,36 @@
       <option name="project" value="LOCAL" />
       <updated>1543411783887</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="voll brutal">
+      <created>1543418287692</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1543418287693</updated>
+    </task>
+    <task id="LOCAL-00021" summary="voll brutal">
+      <created>1543436746464</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1543436746464</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38012000" />
+    <option name="totallyTimeSpent" value="45412000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="39" y="27" width="879" height="1053" extended-state="4" />
+    <frame x="39" y="27" width="885" height="1053" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49492016" visible="true" weight="0.3757503" />
-      <window_info id="Structure" order="1" sideWeight="0.5050798" side_tool="true" visible="true" weight="0.3757503" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4934688" visible="true" weight="0.23718713" />
+      <window_info id="Structure" order="1" sideWeight="0.5065312" side_tool="true" visible="true" weight="0.23718713" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7623049" visible="true" weight="0.24863686" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.761621" visible="true" weight="0.24863686" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997735" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -474,7 +501,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.23769508" side_tool="true" visible="true" weight="0.24863686" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.23837902" side_tool="true" visible="true" weight="0.24863686" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.3295583" />
@@ -528,7 +555,8 @@
     <MESSAGE value="cam + odo" />
     <MESSAGE value="roh" />
     <MESSAGE value="roh stabil" />
-    <option name="LAST_COMMIT_MESSAGE" value="roh stabil" />
+    <MESSAGE value="voll brutal" />
+    <option name="LAST_COMMIT_MESSAGE" value="voll brutal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -597,23 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/differentControllers/boxPushingCOrigOld1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1887">
-          <caret line="114" column="42" selection-start-line="114" selection-start-column="42" selection-end-line="114" selection-end-column="46" />
-          <folding>
-            <element signature="e#203#214#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/differentControllers/exercise4SolutionNeu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BasicEPuck/ePuck.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -621,20 +632,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withGetPose.py">
+    <entry file="file://$PROJECT_DIR$/Controller/differentControllers/boxPushingCOrigOld1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="53" selection-end-column="42" />
+        <state relative-caret-position="628">
+          <caret line="114" column="42" selection-start-line="114" selection-start-column="42" selection-end-line="114" selection-end-column="46" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#203#214#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withCameraAndOdometrie.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="81" column="24" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
+        <state relative-caret-position="238">
+          <caret line="80" column="16" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/differentControllers/exercise4SolutionNeu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2788">
+          <caret line="167" column="16" selection-start-line="167" selection-start-column="16" selection-end-line="168" selection-end-column="21" />
+          <folding>
+            <element signature="e#214#225#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withGetPose.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="53" selection-end-column="42" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

@@ -19,8 +19,7 @@ def searchBox(image, robo):
     global boxFound
 
     xCenter = [-1]
-    leftMotor, rightMotor = 0.1, -0.1  # turn clockwise, since box detection in image searches from left to right,
-    # and we want to detect the same box again, not a second one appearing now
+    leftMotor, rightMotor = 0.1, -0.1
 
     if detectBox(image, resolX, resolY, xCenter):
         boxFound = True
@@ -78,8 +77,8 @@ def calculateMotorValues(current_pose, final_pose, wheel_radius, wheel_distance)
     #    [0.03, 0, 0],
     #    [0, 0.2, -0.1]])
     matrix_k = np.array([
-        [0.05, 0, 0],
-        [0, 0.05, -0.02]])
+        [0.04, 0, 0],
+        [0, 0.02, -0.015]])
 
     roh = np.sqrt((delta_x**2) + (delta_y**2))
     alpha = -(current_pose[2]) + np.arctan2(delta_y, delta_x)
@@ -110,10 +109,7 @@ def calculateOdometrie(driven_route_left_wheel, driven_route_right_wheel, curren
         [driven_route * (sin(pose[2] + (delta_theta / 2.0)))],
         [delta_theta]])
 
-    # Berechnung der naechsten Pose (P n+1)
     matrix_P_n1 = np.add(pose, matrix)
-
-   # print "matrix_P_n1", matrix_P_n1
 
     return matrix_P_n1
 
@@ -148,12 +144,6 @@ def main():
 
     found = False
 
-    #current_pose_od_a = robot.getPose()
-    #current_pose_od = np.array([
-    #    [current_pose_od_a[0]],
-    #    [current_pose_od_a[1]],
-    #    [current_pose_od_a[2]]])
-
     global current_pose_od
     current_pose_od = np.array([
         [0.5],
@@ -164,7 +154,6 @@ def main():
 
     while robot.isConnected():
         values = robot.getWheelEncoderValues()
-        #robot.fastSensingOverSignal()
 
         current_left_wheel_a = values[0]
         current_right_wheel_a = values[1]
@@ -194,30 +183,18 @@ def main():
         xCenter = [-1]
         image = robot.getCameraImage()
 
-        #current_pose = robot.getPose()
         delta_x = final_pose[0] - current_pose_od[0]
         delta_y = final_pose[1] - current_pose_od[1]
         roh = np.sqrt((delta_x ** 2) + (delta_y ** 2))
-        #print "roh", roh
+        print "roh", roh
 
         #print boxFound
         if boxFound != True:
             leftMotor, rightMotor = searchBox(image, robot)
-
         elif roh > 0.45:
-            #robot.setMotorSpeeds(0, 0)
             leftMotor, rightMotor = approach(xCenter, image, maxVel)
-            #print "current_pose_x", current_pose_od[0]
-            #print "final_pose_x", final_pose[0]
-            #print "Drive"
         else:
-            #print "uppps"
-            #leftMotor, rightMotor = [0,0]
             leftMotor, rightMotor = calculateMotorValues(current_pose_od, final_pose, wheel_radius, wheel_distance)
-            #maxVel = 120 * np.pi / 180
-
-            #leftMotor = leftMotor + maxVel / 2
-            #rightMotor = rightMotor + maxVel / 2
 
             tol = 0.05
 
