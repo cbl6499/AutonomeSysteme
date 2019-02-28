@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Controller/parkRobot_withGetPose.py" line="70" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/Controller/semester1/parkRobot_withGetPose.py" line="70" mnemonic="1" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75b562e4-9b8a-41ba-a9f7-5d0650be07ca" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Controller/boxPushingCOrigOld.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/semester1/differentControllers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scenes/boxPushingExerciseWS18_final.ttt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scenes/coloredPuckPushingExerciseSS19_final.ttt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AutonomeSysteme.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AutonomeSysteme.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/parkRobot_withCameraAndOdometrie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/parkRobot_withCameraAndOdometrie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/differentControllers/boxPushingCOrigOld1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/semester1/differentControllers/boxPushingCOrigOld1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/differentControllers/braitenbergRealEPuck.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/semester1/differentControllers/braitenbergRealEPuck.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/differentControllers/exercise4SolutionNeu.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/semester1/differentControllers/exercise4SolutionNeu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/differentControllers/old.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/semester1/differentControllers/old.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/parkRobot_withCameraAndOdometrie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/semester1/parkRobot_withCameraAndOdometrie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/parkRobot_withGetPose.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/semester1/parkRobot_withGetPose.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/parkRobot_withOdometrie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/semester1/parkRobot_withOdometrie.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,36 +36,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withCameraAndOdometrie.py">
+        <entry file="file://$PROJECT_DIR$/Controller/boxPushingCOrigOld.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="80" column="16" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
+            <state relative-caret-position="695">
+              <caret line="174" column="19" selection-start-line="174" selection-start-column="19" selection-end-line="174" selection-end-column="19" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controller/differentControllers/exercise4SolutionNeu.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2788">
-              <caret line="167" column="16" selection-start-line="167" selection-start-column="16" selection-end-line="168" selection-end-column="21" />
-              <folding>
-                <element signature="e#214#225#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withGetPose.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="53" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#203#214#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,6 +93,7 @@
         <option value="$PROJECT_DIR$/Controller/braitenbergRealEPuck.py" />
         <option value="$PROJECT_DIR$/Controller/differentControllers/boxPushingCOrigOld1.py" />
         <option value="$PROJECT_DIR$/Controller/parkRobot_withCameraAndOdometrie.py" />
+        <option value="$PROJECT_DIR$/Controller/boxPushingCOrigOld.py" />
       </list>
     </option>
   </component>
@@ -139,12 +128,6 @@
             <path>
               <item name="AutonomeSysteme" type="b2602c69:ProjectViewProjectNode" />
               <item name="AutonomeSysteme" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-              <item name="differentControllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AutonomeSysteme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AutonomeSysteme" type="462c0819:PsiDirectoryNode" />
               <item name="Scenes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -156,22 +139,23 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/PyCharmProjekts/ue1.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\clemi\PycharmProjects\AutonomeSysteme\Scenes" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Controller/semester1" />
       <recent name="$PROJECT_DIR$/Controller/differentControllers" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Controller" />
       <recent name="$PROJECT_DIR$/Scenes" />
       <recent name="$PROJECT_DIR$/BasicEPuck" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\clemi\PycharmProjects\AutonomeSysteme\Scenes" />
       <recent name="$PROJECT_DIR$/Controller/differentControllers" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -186,7 +170,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.parkRobot_withCameraAndOdometrie">
+  <component name="RunManager" selected="Python.boxPushingCOrigOld">
+    <configuration name="boxPushingCOrigOld" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="AutonomeSysteme" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Controller" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Controller/boxPushingCOrigOld.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="boxPushingCOrigOld1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="AutonomeSysteme" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -266,29 +271,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Controller/parkRobot_withCameraAndOdometrie.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="parkRobot_withOdometrie" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="AutonomeSysteme" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Controller" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Controller/parkRobot_withOdometrie.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Controller/semester1/parkRobot_withCameraAndOdometrie.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -298,19 +281,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.parkRobot_withOdometrie" />
       <item itemvalue="Python.braitenbergRealEPuck" />
       <item itemvalue="Python.boxPushingCOrigOld1" />
       <item itemvalue="Python.exercise4SolutionNeu" />
       <item itemvalue="Python.parkRobot_withCameraAndOdometrie" />
+      <item itemvalue="Python.boxPushingCOrigOld" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.boxPushingCOrigOld" />
         <item itemvalue="Python.parkRobot_withCameraAndOdometrie" />
         <item itemvalue="Python.boxPushingCOrigOld1" />
         <item itemvalue="Python.exercise4SolutionNeu" />
         <item itemvalue="Python.braitenbergRealEPuck" />
-        <item itemvalue="Python.parkRobot_withOdometrie" />
       </list>
     </recent_temporary>
   </component>
@@ -485,15 +468,15 @@
     <option name="totallyTimeSpent" value="45412000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="39" y="27" width="885" height="1053" extended-state="4" />
+    <frame x="0" y="43" width="3000" height="1957" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4934688" visible="true" weight="0.23718713" />
-      <window_info id="Structure" order="1" sideWeight="0.5065312" side_tool="true" visible="true" weight="0.23718713" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49247822" visible="true" weight="0.23714478" />
+      <window_info id="Structure" order="1" sideWeight="0.50752175" side_tool="true" weight="0.23714478" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.761621" visible="true" weight="0.24863686" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7611637" visible="true" weight="0.24806663" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997735" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -501,7 +484,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.23837902" side_tool="true" visible="true" weight="0.24863686" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.23883626" side_tool="true" visible="true" weight="0.24806663" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.3295583" />
@@ -575,13 +558,6 @@
         <state relative-caret-position="-5559" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="822">
-          <caret line="107" column="12" selection-start-line="107" selection-start-column="12" selection-end-line="107" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1987194230/__builtin__.py" />
     <entry file="file://$PROJECT_DIR$/BasicEPuck/ePuckVRep.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -594,14 +570,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Controller/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/Controller/differentControllers/old.py">
+    <entry file="file://$PROJECT_DIR$/Controller/semester1/differentControllers/old.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1173">
           <caret line="88" column="27" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/differentControllers/braitenbergRealEPuck.py">
+    <entry file="file://$PROJECT_DIR$/Controller/semester1/differentControllers/braitenbergRealEPuck.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="31" />
@@ -615,7 +591,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withOdometrie.py">
+    <entry file="file://$PROJECT_DIR$/Controller/semester1/parkRobot_withOdometrie.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2210">
           <caret line="133" column="16" selection-start-line="133" selection-start-column="11" selection-end-line="133" selection-end-column="16" />
@@ -632,7 +608,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/differentControllers/boxPushingCOrigOld1.py">
+    <entry file="file://$PROJECT_DIR$/Controller/semester1/differentControllers/boxPushingCOrigOld1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="628">
           <caret line="114" column="42" selection-start-line="114" selection-start-column="42" selection-end-line="114" selection-end-column="46" />
@@ -642,7 +618,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withCameraAndOdometrie.py">
+    <entry file="file://$PROJECT_DIR$/Controller/semester1/parkRobot_withCameraAndOdometrie.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="80" column="16" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
@@ -652,9 +628,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/differentControllers/exercise4SolutionNeu.py">
+    <entry file="file://$PROJECT_DIR$/Controller/semester1/differentControllers/exercise4SolutionNeu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2788">
+        <state relative-caret-position="1106">
           <caret line="167" column="16" selection-start-line="167" selection-start-column="16" selection-end-line="168" selection-end-column="21" />
           <folding>
             <element signature="e#214#225#0" expanded="true" />
@@ -662,12 +638,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/parkRobot_withGetPose.py">
+    <entry file="file://$PROJECT_DIR$/Controller/semester1/parkRobot_withGetPose.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="53" selection-end-column="42" />
+        <state relative-caret-position="58">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="108" column="9" selection-start-line="108" selection-end-line="108" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/boxPushingCOrigOld.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="695">
+          <caret line="174" column="19" selection-start-line="174" selection-start-column="19" selection-end-line="174" selection-end-column="19" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#203#214#0" expanded="true" />
           </folding>
         </state>
       </provider>
