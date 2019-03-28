@@ -5,20 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75b562e4-9b8a-41ba-a9f7-5d0650be07ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Controller/boxPushingCOrigOld.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controller/semester1/differentControllers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scenes/boxPushingExerciseWS18_final.ttt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scenes/coloredPuckPushingExerciseSS19_final.ttt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AutonomeSysteme.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AutonomeSysteme.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/CorridorController.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/opticalflow/MainController.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/opticalflow/behaviour.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/opticalflow/behaviourAvoidRobot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/opticalflow/behaviourDriveForward.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/opticalflow/behaviourUnwedgeFromWall.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/opticalflow/opticalFlowVrep.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/differentControllers/boxPushingCOrigOld1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/semester1/differentControllers/boxPushingCOrigOld1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/differentControllers/braitenbergRealEPuck.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/semester1/differentControllers/braitenbergRealEPuck.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/differentControllers/exercise4SolutionNeu.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/semester1/differentControllers/exercise4SolutionNeu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/differentControllers/old.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/semester1/differentControllers/old.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/parkRobot_withCameraAndOdometrie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/semester1/parkRobot_withCameraAndOdometrie.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/parkRobot_withGetPose.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/semester1/parkRobot_withGetPose.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/parkRobot_withOdometrie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/semester1/parkRobot_withOdometrie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/boxPushingCOrigOld_ColorFiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/boxPushingCOrigOld_ColorFiler.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,14 +29,14 @@
     <SUITE FILE_PATH="coverage/AutonomeSysteme$parkRobot_withCameraAndOdometrie.coverage" NAME="parkRobot_withCameraAndOdometrie Coverage Results" MODIFIED="1543482469284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Controller" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Controller/boxPushingCOrigOld.py">
+        <entry file="file://$PROJECT_DIR$/Controller/opticalflow/CorridorController.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="695">
-              <caret line="174" column="19" selection-start-line="174" selection-start-column="19" selection-end-line="174" selection-end-column="19" />
+            <state relative-caret-position="145">
+              <caret line="71" column="43" lean-forward="true" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
               <folding>
-                <element signature="e#203#214#0" expanded="true" />
+                <element signature="e#24#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,14 +62,19 @@
       <find>_wheelEncoderValues</find>
       <find>encoder</find>
       <find>getWheelEncoderValues</find>
-      <find>detectBox</find>
       <find>distance</find>
       <find>distances</find>
       <find>setMotor</find>
       <find>print</find>
       <find>_getPose</find>
-      <find>maxVel</find>
       <find>boxFound</find>
+      <find>detectBox</find>
+      <find>state</find>
+      <find>normalizeDistances</find>
+      <find>resize</find>
+      <find>maxVel</find>
+      <find>19</find>
+      <find>200</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -93,15 +93,27 @@
         <option value="$PROJECT_DIR$/Controller/braitenbergRealEPuck.py" />
         <option value="$PROJECT_DIR$/Controller/differentControllers/boxPushingCOrigOld1.py" />
         <option value="$PROJECT_DIR$/Controller/parkRobot_withCameraAndOdometrie.py" />
+        <option value="$PROJECT_DIR$/Controller/boxp.py" />
         <option value="$PROJECT_DIR$/Controller/boxPushingCOrigOld.py" />
+        <option value="$PROJECT_DIR$/Controller/boxPushingCOrigOld_ColorFiler.py" />
+        <option value="$PROJECT_DIR$/Controller/opticalFlowVrep.py" />
+        <option value="$PROJECT_DIR$/Controller/opticalflow/behaviour.py" />
+        <option value="$PROJECT_DIR$/Controller/opticalflow/behaviourDriveForward.py" />
+        <option value="$PROJECT_DIR$/Controller/opticalflow/unwedgeFromWall.py" />
+        <option value="$PROJECT_DIR$/Controller/opticalflow/behaviourUnwedgeFromWall.py" />
+        <option value="$PROJECT_DIR$/Controller/flowController.py" />
+        <option value="$PROJECT_DIR$/Controller/CorridorController.py" />
+        <option value="$PROJECT_DIR$/Controller/opticalflow/behaviourAvoidRobot.py" />
+        <option value="$PROJECT_DIR$/Controller/opticalflow/CorridorController.py" />
+        <option value="$PROJECT_DIR$/Controller/opticalflow/MainController.py" />
+        <option value="$PROJECT_DIR$/Controller/opticalflow/opticalFlowVrep.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="39" />
-    <option name="y" value="27" />
-    <option name="width" value="885" />
-    <option name="height" value="1053" />
+    <option name="y" value="21" />
+    <option name="width" value="1500" />
+    <option name="height" value="978" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -128,7 +140,8 @@
             <path>
               <item name="AutonomeSysteme" type="b2602c69:ProjectViewProjectNode" />
               <item name="AutonomeSysteme" type="462c0819:PsiDirectoryNode" />
-              <item name="Scenes" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+              <item name="opticalflow" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -138,6 +151,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -145,17 +159,17 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Controller/semester1" />
-      <recent name="$PROJECT_DIR$/Controller/differentControllers" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Controller/opticalflow" />
       <recent name="$PROJECT_DIR$/Controller" />
       <recent name="$PROJECT_DIR$/Scenes" />
       <recent name="$PROJECT_DIR$/BasicEPuck" />
       <recent name="C:\Users\clemi\PycharmProjects\AutonomeSysteme\Scenes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Controller/semester1" />
       <recent name="$PROJECT_DIR$/Controller/differentControllers" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -170,8 +184,50 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.boxPushingCOrigOld">
-    <configuration name="boxPushingCOrigOld" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.CorridorController">
+    <configuration name="CorridorController" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="AutonomeSysteme" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Controller/opticalflow" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Controller/opticalflow/CorridorController.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MainController" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="AutonomeSysteme" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Controller/opticalflow" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Controller/opticalflow/MainController.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="boxPushingCOrigOld_ColorFiler" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="AutonomeSysteme" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -183,7 +239,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Controller/boxPushingCOrigOld.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Controller/contollers/boxPushingCOrigOld_ColorFiler.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -192,29 +248,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="boxPushingCOrigOld1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="AutonomeSysteme" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Controller/differentControllers" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Controller/differentControllers/boxPushingCOrigOld1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="braitenbergRealEPuck" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="flowController" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="AutonomeSysteme" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -226,30 +260,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Controller/differentControllers/braitenbergRealEPuck.py" />
-      <option name="PARAMETERS" value="3312" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="exercise4SolutionNeu" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="AutonomeSysteme" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Controller/differentControllers" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Controller/differentControllers/exercise4SolutionNeu.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Controller/contollers/CorridorController.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -258,7 +269,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="parkRobot_withCameraAndOdometrie" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="opticalFlowVrep" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="AutonomeSysteme" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -270,8 +281,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Controller/semester1/parkRobot_withCameraAndOdometrie.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Controller/contollers/opticalFlowVrep.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -281,19 +291,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.braitenbergRealEPuck" />
-      <item itemvalue="Python.boxPushingCOrigOld1" />
-      <item itemvalue="Python.exercise4SolutionNeu" />
-      <item itemvalue="Python.parkRobot_withCameraAndOdometrie" />
-      <item itemvalue="Python.boxPushingCOrigOld" />
+      <item itemvalue="Python.boxPushingCOrigOld_ColorFiler" />
+      <item itemvalue="Python.opticalFlowVrep" />
+      <item itemvalue="Python.flowController" />
+      <item itemvalue="Python.MainController" />
+      <item itemvalue="Python.CorridorController" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.boxPushingCOrigOld" />
-        <item itemvalue="Python.parkRobot_withCameraAndOdometrie" />
-        <item itemvalue="Python.boxPushingCOrigOld1" />
-        <item itemvalue="Python.exercise4SolutionNeu" />
-        <item itemvalue="Python.braitenbergRealEPuck" />
+        <item itemvalue="Python.CorridorController" />
+        <item itemvalue="Python.MainController" />
+        <item itemvalue="Python.flowController" />
+        <item itemvalue="Python.opticalFlowVrep" />
+        <item itemvalue="Python.boxPushingCOrigOld_ColorFiler" />
       </list>
     </recent_temporary>
   </component>
@@ -461,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543436746464</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="master_semester2 Controller with Color Filter">
+      <created>1551812511623</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1551812511624</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -469,22 +486,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="43" width="3000" height="1957" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49247822" visible="true" weight="0.23714478" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49247822" visible="true" weight="0.12415426" />
       <window_info id="Structure" order="1" sideWeight="0.50752175" side_tool="true" weight="0.23714478" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7611637" visible="true" weight="0.24806663" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997735" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8105548" weight="0.20999405" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39976203" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.23883626" side_tool="true" visible="true" weight="0.24806663" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.1894452" side_tool="true" weight="0.24449733" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.3295583" />
@@ -495,22 +511,23 @@
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2524013" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49247822" visible="true" weight="0.1759134" />
+      <window_info id="Structure" order="1" sideWeight="0.50752175" side_tool="true" weight="0.23714478" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295583" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8105548" visible="true" weight="0.24449733" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997735" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.1894452" side_tool="true" visible="true" weight="0.24449733" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.3295583" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -539,10 +556,28 @@
     <MESSAGE value="roh" />
     <MESSAGE value="roh stabil" />
     <MESSAGE value="voll brutal" />
-    <option name="LAST_COMMIT_MESSAGE" value="voll brutal" />
+    <MESSAGE value="master_semester2 Controller with Color Filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="master_semester2 Controller with Color Filter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Controller/opticalFlowVrep.py</url>
+          <line>96</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Controller/opticalFlowVrep.py</url>
+          <line>79</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Controller/opticalflow/CorridorController.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -601,29 +636,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BasicEPuck/ePuck.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="217" column="8" selection-start-line="217" selection-start-column="8" selection-end-line="217" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controller/semester1/differentControllers/boxPushingCOrigOld1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="628">
           <caret line="114" column="42" selection-start-line="114" selection-start-column="42" selection-end-line="114" selection-end-column="46" />
           <folding>
             <element signature="e#203#214#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/semester1/parkRobot_withCameraAndOdometrie.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="80" column="16" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -638,13 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/semester1/parkRobot_withGetPose.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1008">
@@ -652,12 +663,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/boxPushingCOrigOld.py">
+    <entry file="file://$PROJECT_DIR$/Controller/boxp.py" />
+    <entry file="file://$PROJECT_DIR$/Controller/boxPushingCOrigOld.py" />
+    <entry file="file://$PROJECT_DIR$/BasicEPuck/vrep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="174" column="19" selection-start-line="174" selection-start-column="19" selection-end-line="174" selection-end-column="19" />
+        <state relative-caret-position="-3306" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/semester1/parkRobot_withGetPose.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/semester1/parkRobot_withCameraAndOdometrie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3294">
+          <caret line="80" column="16" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
           <folding>
-            <element signature="e#203#214#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BasicEPuck/ePuck.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6657">
+          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../uebung2/OpenCVOpticalFlow/Code/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/boxPushingCOrigOld_ColorFiler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="23" selection-start-line="23" selection-end-line="23" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/opticalflow/behaviourDriveForward.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/opticalflow/behaviourUnwedgeFromWall.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/CorridorController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1218">
+          <caret line="3" column="42" lean-forward="true" selection-start-line="3" selection-end-line="3" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/opticalflow/opticalFlowVrep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1827">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/opticalFlowVrep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="56" column="42" lean-forward="true" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
+          <folding>
+            <element signature="e#270#281#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/opticalflow/behaviour.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="21" column="75" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/opticalflow/MainController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="928">
+          <caret line="71" column="35" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="35" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/opticalflow/behaviourAvoidRobot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/opticalflow/CorridorController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="71" column="43" lean-forward="true" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
